@@ -25,6 +25,8 @@ Deux versions de cette oeuvre sont disponibles :
 
 - Travail de Piet Mondrian
 
+- Travail de AARON de Harold Cohen, dans le choix de couleurs brutes et diverses
+
 ### IA :
 ChatGPT a été utilisé pour ce code. Rien n'a été *généré* par IA. Cependant, je l'ai utilisé pour :
 - certains calculs mathématiques (ex : float x = i * widthCell + (widthCell - widthSquare)/2 pour pouvoir centrer les carrés dans les cellules)
