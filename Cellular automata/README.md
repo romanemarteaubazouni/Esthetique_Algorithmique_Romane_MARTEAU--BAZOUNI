@@ -10,6 +10,11 @@ Pour avoir un exemple d'automate cellulaire en 2D, j'ai entièrement codé une v
 ## Après-midi : Suite du projet personnel
 Pour avoir un automate personnalisé et original, j'ai changé les conditions d'évolution des générations de cellules de GameOfLife. Cela permet de ne pas arriver trop rapidement aux gliders.
 
+L'idée reste similaire :
+- si une cellule vivante est trop entourée ou trop peu : elle meurt ;
+- si une cellule morte est entourée de 2 personnes, elle re-nait ;
+- sinon, elle reste dans son état actuel.
+
 Pour plus d'esthétisme, des couleurs ont été ajoutées.
 
 Le projet d'aujourd'hui a un aspect plus scientifique que celui d'hier. Les cellules peu entourées sont de couleurs froides (bleu clair, vert clair...) et les cellules ayant plus de voisins sont de couleurs chaudes (rouge, orange...). Enfin, les cellules mortes, sont bleues/blanches.
