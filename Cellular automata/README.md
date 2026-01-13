@@ -23,7 +23,7 @@ Le projet d'aujourd'hui a un aspect plus scientifique que celui d'hier. Les cell
 
 L'idée finale est la suivante : on essaye de se rendre compte de la densité de la grille, autant visuellement que grâce au son. Ainsi, si une grille est assez dense (ie elle est plutot rouge ou orange), alors on entend un son aigu. Sinon elle produit un son plutôt grave.
 
-*Remarque : L'idée originelle était d'avoir un son plutôt harmonieux, ce qui n'est clairement pas le cas ici. Cela s'est avéré compliqué à réaliser, en si peu de temps. Cela reste une piste d'amélioration à explorer.*
+*Remarque : L'idée originelle était d'avoir un son plutôt harmonieux, ce qui n'est pas vraiment le cas ici. Cela s'est avéré compliqué à réaliser, en si peu de temps. Cependant, la fonction env.play() m'a permis de faire des crescendos et decrescendos pour assurer une certaine harmonie. Cela reste une piste d'amélioration à explorer.*
 
 
 ## Crédits
