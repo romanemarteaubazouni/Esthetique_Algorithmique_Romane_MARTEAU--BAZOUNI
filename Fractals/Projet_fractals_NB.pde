@@ -20,7 +20,7 @@ void setup() {
 void draw(){
   background(0);
   loadPixels();
-  float t = frameCount * 0.05; // Inclusion d'une variable temporelle
+  float t = frameCount * 0.01; // Inclusion d'une variable temporelle
   re_c = 0.7 * cos(t);      // Oscillations (0.7 : valeurs expérimentales pour esthétisme)
   im_c = 0.7 * sin(t);
   
