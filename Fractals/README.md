@@ -16,9 +16,9 @@ Le code, qui ne marchait pas avant la pause midi, a été retouché.
 
 Pour dynamiser la structure, j'ai choisi de faire varier le critère de Julia (c) au cours du temps. 
 
-La fractale a été initialement réalisée en nuance de gris. Deux versions sont disponibles dans ce dossier. Une version non optimale, avec un affichage pixel par pixel, et une version plus optimale. Cependant, cette dernière présente un problème d'affichage que je n'ai pas réussi à régler, même avec IA et mes camarades.
+La fractale a été initialement réalisée en nuance de gris. Deux versions ont été réalisées. Une version non optimale, avec un affichage pixel par pixel qui n'est pas dans ce dossier, et une version plus optimale.
 
-Enfin, j'ai souhaité ajouté de la couleur, ce qui m'a beaucoup posé problème. J'ai fait le choix d'utiliser le code optimisé de la version N&B. Cela n'enlève rien au problème d'affichage dans Processing...
+Enfin, j'ai souhaité ajouté de la couleur, ce qui m'a beaucoup posé problème. J'ai fait le choix d'utiliser le code optimisé de la version N&B.
 
 ## Crédits
 ### IA :

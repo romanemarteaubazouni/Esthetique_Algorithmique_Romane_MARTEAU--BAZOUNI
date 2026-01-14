@@ -1,6 +1,3 @@
-// Ce code est une version plus optimale qui n'affiche pas chauqe pixel un par un. Cependant, Processing présente un problème d'affichage lorsqu'on lance ce code.
-// Ce problème persiste.
-
 // On limite le nombre d'itération sur chaque pixel
 int max_iter = 200;
 
@@ -17,6 +14,7 @@ float ymax = 1.5;
 void setup() {
   size(600, 600);
   colorMode(HSB, 255);
+  pixelDensity(1); // Pour éviter les problèmes d'affichage sur Processing (affichage double car écran 4K)
 }
 
 void draw(){
