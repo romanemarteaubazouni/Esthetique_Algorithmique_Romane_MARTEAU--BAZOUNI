@@ -14,17 +14,18 @@ Le code, qui ne marchait pas avant la pause midi, a été retouché.
 
 ![alt text](./Screenshots/Projet_individuel_N&B.png)
 
-La fractale, initialement en nuance de gris, a été colorée. Deux versions sont cependant disponible dans ce dossier.
-Les couleurs initiales étaient vraiment *trop* vives et assez aléatoires. Elles ont été changées. C'était surement le plus gros travail d'aujourd'hui.
-
 Pour dynamiser la structure, j'ai choisi de faire varier le critère de Julia (c) au cours du temps. 
+
+La fractale a été initialement réalisée en nuance de gris. Deux versions sont disponibles dans ce dossier. Une version non optimale, avec un affichage pixel par pixel, et une version plus optimale. Cependant, cette dernière présente un problème d'affichage que je n'ai pas réussi à régler, même avec IA et mes camarades.
+
+Enfin, j'ai ajouté des couleurs.
 
 ## Crédits
 ### IA :
 ChatGPT a été utilisé pour ce code. *Rien n'a été généré par IA*. Tous les caluls mathématiques (l. 25, l. 31...) ont été posés par mes soins. Cependant, j'ai utilisé de l'IA pour :
 - l'utilisation des complexes dans Processing. Je cherchais une fonction complex() ou quelque chose du genre, idé abandonnée pour finaleemnt maic=puler les parties imaginaires et réelles.
 
-- dégradé de couleur, qui a pris beaucoup de temps : mode HSB plutôt que RGB.
+- optimisation du code : au lieu d'afficher pixel par pixel, utilisation de loadPixels(). Cependant, problème d'affichage que je n'ai pas réussi à régler.
 
 ### Cours en ligne et articles :
 - https://mytino.itch.io/fractal-explorer : ispiration de certains codes disponibles ;
