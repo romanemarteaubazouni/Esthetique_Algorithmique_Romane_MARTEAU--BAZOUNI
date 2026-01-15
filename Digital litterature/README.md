@@ -11,8 +11,8 @@ Idée de projet : Sur la base des "Love Letters", avoir des listes de mots préd
 Choix : j'ai choisi de faire ce travail en anglais, toujours pour éviter les problèmes liés à la conjugaison et aux déterminants.
 
 Pistes d'amélioration, à explorer avec plus de temps :
-- côté esthétique du poème : ajouter du mouvement (les cercles tournent par exemple);
-- que l'haiku central se mette à jour en fonction des poèmes formés par l'utilisateur.
+- Côté esthétique du poème : ajouter du mouvement (les cercles tournent par exemple);
+- Que l'haiku central se mette à jour en fonction des poèmes formés par l'utilisateur. C'était l'idée que je voulais mettre en oeuvre. Cependant, avec les contraintes de temps et d'apprentissage du langage Java, je n'ai pas encore pu le faire.
 
 ## Crédits
 ### IA :
