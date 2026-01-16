@@ -28,7 +28,6 @@ ChatGPT et Gemini ont été utilisés pour ce code. *Rien n'a été généré pa
 
 - Inspirations Pinterest
 ![alt text](./Inspirations/Inspirations_Pinterest.png)
-![alt text](./Inspirations/Inspirations_Pinterest2.png)
 
 ### Camarades :
 - pour l'explication du dégradé de couleur et de la fonction lerpColor
