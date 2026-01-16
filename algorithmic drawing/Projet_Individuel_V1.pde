@@ -53,3 +53,25 @@ void mousePressed() {
     }
   }
 }
+
+void keyPressed() {
+  if (key == '+') {
+    rows++;
+    columns++;
+  }
+  else if (key == '-') {
+    rows--;
+    columns--;
+  }
+    // recréer les tableaux avec la nouvelle taille
+    sizes = new float[columns][rows];
+    colors = new color[columns][rows];
+
+    // réinitialiser les valeurs
+    for (int i = 0; i < columns; i++) {
+      for (int j = 0; j < rows; j++) {
+        sizes[i][j] = random(0.5, 0.9);
+        colors[i][j] = color(random(255), random(255), random(255));
+      }
+    }
+}

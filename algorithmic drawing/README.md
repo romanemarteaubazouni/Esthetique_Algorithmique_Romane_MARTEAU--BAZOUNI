@@ -9,7 +9,7 @@ Elles ont d'abord été codées en noir et blanc avant l'ajout de la couleur pou
 J'ai souhaité animer la couleur. J'ai demandé à ChatGPT une méthode, d'où l'utilisation de l'offset. Le code n'a cependant pas été généré par IA.
 
 ## Après-midi : Projet personnel
-Idée initiale : Sur la base d'oeuvres comme Neo Geo City ou encore les oeuvres les plus connues de Mondrian, créer une oeuvre interactive qui est une grille de carrés donc les tailles sont définis aléatoirement. Chaque carré aurait une couleur différente. Lorsque l'utilisateur clique sur un carré, la grille change de couleur.
+Idée initiale : Sur la base d'oeuvres comme Neo Geo City ou encore les oeuvres les plus connues de Mondrian, créer une oeuvre interactive qui est une grille de carrés donc les tailles sont définis aléatoirement. Chaque carré aurait une couleur différente. Lorsque l'utilisateur clique sur un carré, la grille change de couleur. Si il appuie sur + ou -, le nombre de carrés varie.
 
 Finalement, par question d'esthétisme, voici l'idée choisie : créer une oeuvre interactive qui est une grille de cellules (toutes ont la même taille) à fond blanc. A l'intérieur de chacune, un carré de couleur et taille aléatoire est placé.
 
