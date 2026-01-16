@@ -2,7 +2,7 @@
 
 ## Mon projet préféré
 Le "free project"
-
+![alt text](./Free%20project/data/3.JPG) devient :
 ![alt text](./Free%20project/Screenshots/V3_Effet_peinture.png)
 
 Au cours de cette semaine, j'ai eu pas mal de difficultés à trouver de l'inspiration et de mettre en oeuvre mes idées, bloquée par la barrière du langage Java.
