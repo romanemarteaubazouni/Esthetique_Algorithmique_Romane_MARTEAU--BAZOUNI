@@ -20,8 +20,12 @@ String[] verbs = {
   "lingers", "waits", "awakes", "follows", "sleeps"
 };
 
-// Haiku : 3 phrases
-String[] poem = new String[3];
+// PARAMETRES
+// Haiku généré : 3 phrases
+String[] autoPoem = new String[3];
+// Haiku de l'utilisateur
+String[] userPoem = {"[_____]", "[_____]", "[_____]"};
+float[] userPoemY = new float[3]; // Coordonées des trois phrases de l'utilisateur
 
 // Mots sélectionnables par l'utilisateur
 String[] extraWords = new String[23];
@@ -29,20 +33,27 @@ String[] extraWords = new String[23];
 float[] cardX = new float[23];
 float[] cardY = new float[23];
 
+//Pour le drag and drop
+int draggedIndex = -1; // Index du mot que l'on traîne (-1 = aucun)
+
+int startTime;
+
 void setup() {
   size(800, 800);
   textAlign(CENTER, CENTER);
   rectMode(CENTER);
   
   // Haiku central
-  poem[0] = "A " + choice(adjectives) + " " + choice(nouns) + ",";
-  poem[1] = choice(adverbs) + " " + choice(verbs) + ",";
-  poem[2] = "and " + choice(verbs) + " a " + choice(nouns) + ".";
+  autoPoem[0] = "A " + choice(adjectives) + " " + choice(nouns) + ",";
+  autoPoem[1] = choice(adverbs) + " " + choice(verbs) + ",";
+  autoPoem[2] = "and " + choice(verbs) + " a " + choice(nouns) + ".";
   
-  // Paramètres des cercles : centrés au milieu de l'image
-  float centerX = width/2;
-  float centerY = height/2;
-  
+  // Position du haiku de l'utilisateur
+  userPoemY[0] = height/2 - 50;
+  userPoemY[1] = height/2;
+  userPoemY[2] = height/2 + 50;
+
+  // AFFICHAGE DES MOTS EN CERCLES CONCENTRIQUES
   for (int i = 0; i < 23; i++) {
     // On remplit la liste des mots mis à disposition
     if (i == 0) extraWords[i] = "And";
@@ -66,16 +77,15 @@ void setup() {
       angle = map(i, 10, 23, 0, TWO_PI);
       radius = 350; 
     }
-    
+    // Paramètres des cercles : centrés au milieu de l'image
+    float centerX = width/2;
+    float centerY = height/2;
+  
     // Conversion polaire (coordonnées dans les cercles) -> cartésien (dans le plan de l'image)
     cardX[i] = centerX + cos(angle) * radius;
     cardY[i] = centerY + sin(angle) * radius;
   }
 }
-
-//Pour le drag and drop
-int draggedIndex = -1; // Index du mot que l'on traîne (-1 = aucun)
-float opacity = 255;
 
 void draw() {  
   // Dégradé de bleu en fond
@@ -89,18 +99,23 @@ void draw() {
     stroke(c);
     line(0, y, width, y);
   }
-
   textSize(17);
   
-  // Affichage de l'haiku
-  // On réduit l'opacité après le lancement
-  opacity = map(millis(), 0, 15000, 255, 0); 
-  opacity = constrain(opacity, 0, 255); // On force l'opacité à ne pas descendre sous 0
+  int elapsed = millis() - startTime; // Temps passé : idée ChatGPT
 
-  for (int i = 0; i < poem.length; i++) {
-    // Dégradé de gris : effet esthétique
-    fill(i * 80, opacity); 
-    text(poem[i], width/2, height/2 + (i * 25));
+  // Affichage de l'haiku généré
+  if (elapsed < 10000) {// Reste affiché 10s
+    fill(50, 50, 80);
+    for (int i = 0; i < 3; i++) {
+      text(autoPoem[i], width/2, userPoemY[i]);
+    }
+  }
+  else {
+    // Mode Utilisateur
+    for (int i = 0; i < 3; i++) {
+      fill(50, 50, 80);
+      text(userPoem[i], width/2, userPoemY[i]);
+    }
   }
   
   // Pour le drag : si on a cliqué sur un mot, la souris le suit
@@ -111,18 +126,12 @@ void draw() {
   
   // Dessiner la boîte des mots de l'utilisateur
   for (int i = 0; i < extraWords.length; i++) {
-    fill(240, 240, 255);
+    fill(255);
     stroke(200);
-    rect(cardX[i], cardY[i], 80, 30); // Boîte
+    rect(cardX[i], cardY[i], 80, 30, 5); // Boîte
     
-    if (cardY[i]>height/2) {
-      fill(160);
-      text(extraWords[i], cardX[i], cardY[i]); // Texte
-    }
-    else {
-      fill(0);
-      text(extraWords[i], cardX[i], cardY[i]); // Texte
-    }
+    fill(0);
+    text(extraWords[i], cardX[i], cardY[i]); // Texte
   }
 }
 
@@ -130,7 +139,7 @@ void draw() {
 void mousePressed() {
   // On cherche si on clique sur un mot
   for (int i = 0; i < extraWords.length; i++) {
-    if (dist(mouseX, mouseY, cardX[i], cardY[i]) < 30) {
+    if (dist(mouseX, mouseY, cardX[i], cardY[i]) < 40) {
       draggedIndex = i; // Index du mot sélectionné
       break; 
     }
@@ -138,24 +147,30 @@ void mousePressed() {
 }
 
 void mouseReleased() {
-  draggedIndex = -1;
+  if (draggedIndex != -1) {
+    for (int i = 0; i < 3; i++) {
+      if (dist(mouseX, mouseY, width/2, userPoemY[i]) < 50) {
+        // Possibilité de remplir l'espace prévu pour le haiku
+        if (userPoem[i].equals("[_____]")) {
+          userPoem[i] = extraWords[draggedIndex];
+        }
+        else {
+        userPoem[i] += " " + extraWords[draggedIndex];
+        }
+        cardX[draggedIndex] = -1000; // On sort le mot de sa boite
+        break;
+      }
+    }
+    draggedIndex = -1;
+  }
 }
 
 void keyPressed() {
   if (key == ' ') {
-    // Régénérer tous les mots
-    for (int i = 0; i < 23; i++) {
-      if (i == 0) extraWords[i] = "And";
-      else if (i == 1) extraWords[i] = "A";
-      else if (i == 2) extraWords[i] = "The";
-      else if (i < 8) extraWords[i] = choice(nouns);
-      else if (i < 13) extraWords[i] = choice(adjectives);
-      else if (i < 18) extraWords[i] = choice(verbs);
-      else extraWords[i] = choice(adverbs);
-    }
+    userPoem[0] = "[_____]"; userPoem[1] = "[_____]"; userPoem[2] = "[_____]";
+    setup(); 
   }
 }
-
 
 // Fonction qui choisit aléatoirement un mot dans une liste de mots (cf Love Letters)
 String choice(String[] list) {

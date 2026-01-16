@@ -30,7 +30,9 @@ Même si j’ai appris comment fonctionnent certaines fonctionnalités de Proces
 ChatGPT et Gemini ont été utilisés comme outils d’assistance, mais aucun texte ou code final n’a été généré automatiquement. J’ai utilisé l’IA pour :
 - générer de nouvelles listes de mots pour l’algorithme de Strachey autour du thème de “la haine”, et comprendre comment mettre en forme le texte (80 caractères par ligne, comme dans les lettres originales) ;
 
-- comprendre le principe du drag-and-drop dans Processing. En particulier, je n’avais pas pensé à associer chaque “carte” de mot à un tableau de coordonnées et à gérer le déplacement via des indices, j’utilisais uniquement des booléens auparavant.
+- comprendre le principe du drag-and-drop dans Processing. En particulier, je n’avais pas pensé à associer chaque “carte” de mot à un tableau de coordonnées et à gérer le déplacement via des indices, j’utilisais uniquement des booléens auparavant ;
+
+- méthode pour gérer le temps (avec un startTime et millis()).
 
 ### Inspirations
 
