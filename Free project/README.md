@@ -38,6 +38,8 @@ Enfin, j'ai cherché à avoir un rendu plus proche de la peinture (effet coup de
 
 ![alt text](./Screenshots/V3_Effet_peinture.png)
 
+Pistes d'amélioration :
+- changer automatiquement de photos lorsque l'on clique sur les flèches
 ## Crédits
 ### IA :
 Gemini a été utilisé pour ce code. *Rien n'a été généré par IA*. Cependant, j'ai utilisé de l'IA pour :
