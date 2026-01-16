@@ -1,45 +1,51 @@
 # Free project
 
 Pour tester le code, installer Processing et exécuter les fichiers .pde.
-Les photos utilisables sur ce projet sont disponibles dans le dossier "data". La ligne de code à changer pour visualiser les différentes photos est la ligne n°25.
 
-## Idée de projet
+Les photos utilisables sur ce projet sont disponibles dans le dossier "data", à placer au même emplacement que les fichiers.pde.
+Pour visualiser vos propres photos, il faut pour l'instant changer la ligne de code n°25 à la main.
 
-Etant très sensible à la photographie et le dessin/peinture, j'ai voulu améner ceci dans ce workshop. L'idée à laquelle j'ai presque immédiatement pensée est la suite : un algorithme qui, à partir d'une photo, génère un dessin numérique, plus ou moins abstrait (point encore flou du projet).
+## Idée du projet
+Étant très sensible à la photographie ainsi qu’au dessin et à la peinture, j’ai voulu amener ces passions dans ce workshop. L’idée m’est venue presque immédiatement : créer un algorithme qui, à partir d’une photo, génère une sorte de dessin numérique, plus ou moins abstrait (un aspect du projet qui reste encore ouvert).
 
+Je souhaitais fusionner deux projets que j’ai appréciés cette semaine :
+- le rendu du jour 1 avec les carrés de couleur,
+- et le rendu du jour 2 sur les automates cellulaires.
 
-Je voulais lier 2 projets que j'aime bien : le rendu du jour 1 avec les carrés de couleurs ; et le rendu du jour 2 : les automates cellulaires. En effet, ayant travaillé assez longuement sur les automates cellulaires lors du jour 2, j'ai décidé de partir sur ça : une photo est transformé en peinture assez abstraite numérique, presque mosaïque. Cela me permet de lier plusieurs passions et de les numériser.
+Étant donné le temps passé sur les automates cellulaires, j’ai décidé de m’appuyer sur ce principe : transformer une photographie en une peinture numérique abstraite, presque sous forme de mosaïque. Cela me permettait de réunir plusieurs passions pour les traduire numériquement.
 
 ### Principe :
-On allume 10 cellules au hasard sur l'écran.
-À chaque nouvelle génération, les cellules allumées activent leurs voisines directes.
-Toutes les cellules actives ajustent leur teinte et leur luminosité pour ressembler à la photo. Jeu avec la luminosité pour avoir cet effet d'apparition progressive.
+On allume 10 cellules au hasard sur l’écran.
+À chaque nouvelle génération, les cellules actives activent leurs voisines directes.
+Toutes les cellules actives ajustent leur teinte et leur luminosité pour se rapprocher de la photo d’origine.
+Un jeu sur la luminosité crée un effet d’apparition progressive.
 
-Version 1 (image quelconque : ici une fleur):
-Ici, la fleur se créée.
-![alt text](./Screenshots/V1_Progess.png)
-Ici, elle est sous forme de mosaïque.
+### Version 1 (image quelconque : ici une fleur):
 ![alt text](./Screenshots/V1_Result.png)
 
-Une fois la partie technique du code ayant été réalisée, j'ai souhaité avoir un rendu final qui me plaisait plus.
+Une fois l’aspect technique stabilisé, j’ai cherché un rendu qui me touchait davantage.
 
-J'ai essayé d'autres formes (triangles, ellipses...). Les ellispes m'ont beaucoup touchées. J'ai donc choisi de partir sur ce type de rendu visuel.
+J’ai testé plusieurs formes (triangles, ellipses…). Les ellipses m’ont particulièrement parlé visuellement, j’ai donc orienté le rendu dans cette direction.
 
-J'ai ensuite voulu avoir des ellipses de tailles diférentes. J'ai arbitrairement choisi d'avoir les ellipses de couleurs claires plus grandes que les couleurs foncées. Cela marchait sur mon image de fleurs mais peut-être pas sur d'autres. 
+J’ai ensuite voulu varier la taille des ellipses. J’ai arbitrairement décidé que les couleurs claires produiraient de grandes ellipses, et les couleurs foncées de petites. Cela fonctionnait sur l’image de fleurs, mais pas forcément sur d’autres.
 
 ![alt text](./Screenshots/V2_Ellipses_fixes.png)
 
-Alors j'ai ajouté de l'interactivité : si l'utilisateur appuie sur '+', les ellipses claires sont grandes. Si il appuie sur '-', ce sont les ellipses sombres.
-Ce qui est intéressant avec ce nouveau paramètre est que l'on peut maintenant créer différentes textures et faire des images qui se détachent un peu plus de la photo originelle.
+Pour rendre le tout plus interactif, j’ai ajouté une commande :
+- en appuyant sur +, les ellipses claires deviennent grandes ;
+- en appuyant sur -, ce sont les ellipses sombres qui grossissent.
+Ce paramètre permet de créer différentes textures et de produire des images qui s’éloignent un peu de la photo d’origine.
 
 ![alt text](./Screenshots/V2_Ellipses_grossies.png)
 
-Enfin, j'ai cherché à avoir un rendu plus proche de la peinture (effet coup de pinceau) car j'y suis personnellement plus sensible. J'ai cherché à remplacer les ellipses par des lignes.
+Enfin, j'ai cherché à avoir un rendu plus proche de la peinture car j'y suis personnellement plus sensible. J'ai cherché à remplacer les ellipses par des lignes pour avoir cet aspect "coups de pinceau".
 
 ![alt text](./Screenshots/V3_Effet_peinture.png)
 
-Pistes d'amélioration :
-- changer automatiquement de photos lorsque l'on clique sur les flèches
+Pistes d'amélioration
+Avec plus de temps, j’aimerais beaucoup explorer la bibliothèque ControlP5, que je n’ai pas réussi à appréhender aujourd’hui.
+Elle me permettrait d’ajouter de vrais boutons ou même une barre de recherche, afin de naviguer beaucoup plus facilement entre différentes images et donner une dimension plus professionnelle et ergonomique à l’interface.
+
 ## Crédits
 ### IA :
 Gemini a été utilisé pour ce code. *Rien n'a été généré par IA*. Cependant, j'ai utilisé de l'IA pour :
