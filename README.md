@@ -13,7 +13,9 @@ Cependant, ce vendredi, j’ai enfin pu me poser pour réaliser un projet qui me
 
 ## Participation
 
-J’ai collaboré avec plusieurs camarades pour apprendre le langage et affiner mes idées. Cependant, lorsque je ne suis pas satisfaite de ce que je produis, j’ai beaucoup de mal à dépasser ma timidité pour présenter mes projets. J’aurais cependant adoré présenter mon dernier projet.
+J’ai collaboré avec plusieurs camarades pour apprendre le langage et affiner mes idées.
+
+Cependant, lorsque je ne suis pas satisfaite de ce que je produis, j’ai beaucoup de mal à dépasser ma timidité pour présenter mes projets, surtout quand l'apprentissage de Java ne m'a permis que de faire des formes et des fonctions assez simples sur les premiers jours. J’aurais cependant adoré présenter mon dernier projet.
 
 C’est une piste d’amélioration personnelle.
 
